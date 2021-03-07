@@ -7,7 +7,7 @@ steps:
   main_clone:
     type: "git-clone"
     description: "Cloning main repository..."
-    repo: "codefreshdemo/cf-example-integration-tests"
+    repo: "robertmaury/cf-example-integration-tests"
     revision: "master"
     git: github
     stage: prepare
