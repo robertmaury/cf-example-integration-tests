@@ -28,7 +28,7 @@ steps:
   run_integration_tests:
     title: "Running integration tests"
     stage: test
-    image: 'daquinox/my-junit-spok-tests:master'
+    image: 'daquinox/my-junit-spock-tests:master'
     commands:
       # Tomcat is certainly up at this point
       - mvn verify -Dserver.host=app
