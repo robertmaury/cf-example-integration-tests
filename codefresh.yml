@@ -35,7 +35,7 @@ steps:
     services:
       composition:
         app:
-                image: 'daquinox/my-spring-app:master'
+          image: 'daquinox/my-spring-app:master'
           ports:
             - 8080
       readiness:
