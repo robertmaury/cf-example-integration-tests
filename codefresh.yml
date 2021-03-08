@@ -28,19 +28,19 @@ steps:
   run_integration_tests:
     title: "Running integration tests"
     stage: test
-    image: 'daquinox/my-junit-spok-tests'
+    image: 'daquinox/my-junit-spok-tests:master'
     commands:
       # Tomcat is certainly up at this point
       - mvn verify -Dserver.host=app
     services:
       composition:
         app:
-          image: 'daquinox/my-spring-app'
+                image: 'daquinox/my-spring-app:master'
           ports:
             - 8080
       readiness:
         timeoutSeconds: 30
         periodSeconds: 15
-        image: byrnedo/alpine-curl
+        image: 'byrnedo/alpine-curl'
         commands:
           - "curl http://app:8080/wizard/"
